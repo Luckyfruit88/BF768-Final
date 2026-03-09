@@ -1,3 +1,8 @@
+# BF768-Final-
+
+## BF768_Final_Proposal_Workflow_Progress
+
+```
 BF768_Final_Proposal_Workflow_Progress/
 ├── 阶段零：选题与proposal框架确认
 │   ├── 1. 明确最终研究主题
@@ -155,3 +160,4 @@ BF768_Final_Proposal_Workflow_Progress/
         ├── 当前完成的是kinase主数据层
         ├── 下一步完成的是kinase annotation layer
         └── 再下一步才是condensate-specific relation layer
+```
