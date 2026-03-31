@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Help</h2>
+<p>This MVP demonstrates three required query workflows plus export and plot output.</p>
+<ul>
+  <li><strong>Kinase query:</strong> Enter a UniProt accession (example: <code>F4JWP9</code>).</li>
+  <li><strong>Condensate query:</strong> Enter a condensate UID (example: <code>E12AB6E0</code>).</li>
+  <li><strong>Disease query:</strong> Enter a disease key (example: <code>DOID:9119</code>).</li>
+  <li>Each result page supports CSV export through the download link.</li>
+  <li>The <a href="{{ url_for('plot_view') }}">Plot page</a> generates and displays a PNG figure.</li>
+</ul>
+{% endblock %}

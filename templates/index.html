@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Query 1: Kinase -> Condensates</h2>
+  <form action="{{ url_for('kinase_view') }}" method="get">
+    <label for="accession">UniProt accession</label>
+    <input id="accession" name="accession" placeholder="e.g. F4JWP9" required>
+    <button type="submit">Run query</button>
+  </form>
+</section>
+
+<section class="card">
+  <h2>Query 2: Condensate -> Proteins</h2>
+  <form action="{{ url_for('condensate_view') }}" method="get">
+    <label for="uid">Condensate UID</label>
+    <input id="uid" name="uid" placeholder="e.g. E12AB6E0" required>
+    <button type="submit">Run query</button>
+  </form>
+</section>
+
+<section class="card">
+  <h2>Query 3: Disease -> Condensates + Evidence</h2>
+  <form action="{{ url_for('disease_view') }}" method="get">
+    <label for="name">Disease identifier/name</label>
+    <input id="name" name="name" placeholder="e.g. DOID:9119" required>
+    <button type="submit">Run query</button>
+  </form>
+</section>
+{% endblock %}

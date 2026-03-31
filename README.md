@@ -1,5 +1,31 @@
 # BF768-Final-
 
+## MVP Implementation (Flask + Relational Integration)
+
+This repository now includes a working MVP that demonstrates:
+
+- Project-specific relational integration over source data files.
+- Custom entity model (`protein`, `condensate`, `protein_condensate`, `cmod`, `disease`, evidence tables).
+- Three custom query workflows:
+  - Kinase -> Condensates
+  - Condensate -> Proteins
+  - Disease -> Condensates + Evidence
+- Custom interface layer via Flask pages (`/`, `/help`, query routes).
+- Custom outputs:
+  - CSV export for each query
+  - Generated PNG graph (`/plot`)
+
+### Run locally
+
+1. Install dependencies:
+   - `python -m pip install -r requirements.txt`
+2. Build/load the database:
+   - `python scripts/load_data.py`
+3. Start the web app:
+   - `python app.py`
+4. Open:
+   - `http://127.0.0.1:5000/`
+
 ## BF768_Final_Proposal_Workflow_Progress
 
 ```

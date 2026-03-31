@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ title }}</h2>
+<p><strong>Input:</strong> {{ query_value }}</p>
+<p>
+  <a href="{{ url_for('download', type=query_type, q=query_value) }}">Download these results (CSV)</a>
+</p>
+
+{% if rows %}
+<table>
+  <thead>
+    <tr>
+      {% for c in columns %}
+      <th>{{ c }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      {% for c in columns %}
+      <td>{{ row[c] }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No results found for this input.</p>
+{% endif %}
+{% endblock %}
